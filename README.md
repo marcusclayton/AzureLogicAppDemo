@@ -64,4 +64,4 @@ Invoke-RestMethod -uri $uri -Method Post -body $body -ContentType 'application/j
 ```
 
 
-** Future Ideas: http://www.quicklearn.com/blog/2016/06/09/deploying-logic-apps-using-visual-studio-team-services/ 
+** Future Integration/Next Steps: http://www.quicklearn.com/blog/2016/06/09/deploying-logic-apps-using-visual-studio-team-services/ 
