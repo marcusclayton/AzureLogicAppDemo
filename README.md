@@ -32,13 +32,23 @@ Body: "New Message Received:" ((Select 'insert parameters from previous step -->
 
 * Save the logic app, and copy the request URL from the first step. 
 * This will be used as a parameter in the PS script below.
-* Email with approval buttons should be sent.
+
+# _________________________________________________________
+## Email with approval buttons should be sent.
+# _________________________________________________________
 ![picture alt](https://mcautomationgitresources.blob.core.windows.net/images/logicAppEmailScreenshot.png "Approval Email")
 
-After selecting "Bug", a browser should launch indicating the request was received. 
+
+
+
+# _________________________________________________________
+## After selecting "Bug", a browser should launch indicating the request was received.
+# _________________________________________________________ 
 ![picture alt](https://mcautomationgitresources.blob.core.windows.net/images/logicAppBugSubmission.png "Approval Response")
 
 
+
+# _________________________________________________________
 ```PowerShell
 $uri = "<LOGIC_APP_URI_HERE>"
 $body = ConvertTo-Json @{
@@ -52,3 +62,4 @@ Invoke-RestMethod -uri $uri -Method Post -body $body -ContentType 'application/j
 ```
 
 
+** Future Ideas: http://www.quicklearn.com/blog/2016/06/09/deploying-logic-apps-using-visual-studio-team-services/ 
