@@ -1,4 +1,5 @@
 # AzureLogicAppDemo
+*** https://channel9.msdn.com/Shows/Azure-Friday/Azure-Logic-Apps-General-Availabilty 
 
 * Using jsonschema.net, Generate sample json schema
   {
@@ -29,4 +30,18 @@ Body: "New Message Received:" ((Select 'insert parameters from previous step -->
 ** Title: New reported Issue: ((Select Subject object))
 ** Message: ((select Message Object from pipeline))
 
-*** https://channel9.msdn.com/Shows/Azure-Friday/Azure-Logic-Apps-General-Availabilty 
+* Save the logic app, and copy the request URL from the first step. 
+* This will be used as a parameter in the PS script
+```PowerShell
+$uri = "<LOGIC_APP_URI_HERE>"
+$body = ConvertTo-Json @{
+        Name = 'Marcus Clayton'
+        Email = "marcus@cco.com"
+        Subject = "Issue 1 from PS"
+        Message = "This is the first filed issue from a PS JSON post."
+}
+
+Invoke-RestMethod -uri $uri -Method Post -body $body -ContentType 'application/json' -Verbose
+```
+
+
