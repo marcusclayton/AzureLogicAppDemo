@@ -31,7 +31,14 @@ Body: "New Message Received:" ((Select 'insert parameters from previous step -->
 ** Message: ((select Message Object from pipeline))
 
 * Save the logic app, and copy the request URL from the first step. 
-* This will be used as a parameter in the PS script
+* This will be used as a parameter in the PS script below.
+* Email with approval buttons should be sent.
+![picture alt](https://mcautomationgitresources.blob.core.windows.net/images/logicAppEmailScreenshot.png "Approval Email")
+
+After selecting "Bug", a browser should launch indicating the request was received. 
+![picture alt](https://mcautomationgitresources.blob.core.windows.net/images/logicAppBugSubmission.png "Approval Response")
+
+
 ```PowerShell
 $uri = "<LOGIC_APP_URI_HERE>"
 $body = ConvertTo-Json @{
