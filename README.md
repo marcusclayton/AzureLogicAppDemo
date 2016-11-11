@@ -1,13 +1,15 @@
 # AzureLogicAppDemo
-*** https://channel9.msdn.com/Shows/Azure-Friday/Azure-Logic-Apps-General-Availabilty 
+** https://channel9.msdn.com/Shows/Azure-Friday/Azure-Logic-Apps-General-Availabilty 
 
 * Using jsonschema.net, Generate sample json schema
+ ```Python
   {
   "Name": "First Last",
   "Email": "firstlast@example.org",
   "Subject": "My Subject",
   "Message": "My Message."
 }
+```
 
 * Generate schema
 * Create blank logic app
